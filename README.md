@@ -1,6 +1,7 @@
 name:kobi Sima
 
 
+
 A Flappy Bird–style arcade game built from scratch in Unity 6.3 with the 2D Built-In Render Pipeline.
 
 You control a small plane that gravity constantly pulls downward. Every tap pushes it back up, while the world scrolls past from right to left. Endless pairs of green pipes come toward you, each pair separated by a gap. Steering the plane through a gap scores one point. Touching a pipe or falling off the bottom of the screen ends the run immediately.
