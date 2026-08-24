@@ -68,4 +68,9 @@ public class GameManager : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
         );
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
