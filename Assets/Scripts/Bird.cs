@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bird : MonoBehaviour
@@ -24,7 +25,9 @@ public class Bird : MonoBehaviour
 
         if (GameManager.Instance.State == GameManager.GameState.Menu)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            bool clickedUI = Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject();
+
+            if (!clickedUI && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
             {
                 GameManager.Instance.StartGame();
             }
