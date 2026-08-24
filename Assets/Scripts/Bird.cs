@@ -24,4 +24,9 @@ public class Bird : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, flapForce);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameManager.Instance.GameOver();
+    }
 }
