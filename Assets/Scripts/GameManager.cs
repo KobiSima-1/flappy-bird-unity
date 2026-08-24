@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     public bool IsGameOver { get; private set; }
 
+    public int Score { get; private set; }
+
     private void Awake()
     {
         Instance = this;
@@ -18,6 +20,13 @@ public class GameManager : MonoBehaviour
         IsGameOver = true;
         Time.timeScale = 0f;
         Debug.Log("Game Over!");
+    }
+
+    public void AddScore()
+    {
+        if (IsGameOver) return;
+        Score++;
+        Debug.Log("Score: " + Score);
     }
 
     public void RestartGame()

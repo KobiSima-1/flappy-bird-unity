@@ -18,6 +18,11 @@ public class Bird : MonoBehaviour
         {
             Flap();
         }
+
+        if (transform.position.y < -6f)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 
     private void Flap()
