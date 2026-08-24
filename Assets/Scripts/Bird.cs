@@ -22,6 +22,17 @@ public class Bird : MonoBehaviour
     {
         if (hasExploded) return;
 
+        if (GameManager.Instance.State == GameManager.GameState.Menu)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                GameManager.Instance.StartGame();
+            }
+            return;
+        }
+
+        if (GameManager.Instance.State != GameManager.GameState.Playing) return;
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             Flap();
