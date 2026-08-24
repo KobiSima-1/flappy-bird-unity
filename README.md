@@ -53,7 +53,7 @@ If the run beat your previous record, the new high score is saved right then, an
 
 ## Running the game
 
-**Prebuilt (Windows):** run `Build/My Flappy Bird.exe`.
+The game must be built from source.
 
 **From source:** open the project in **Unity 6.3 LTS (6000.3.22f1)** via Unity Hub, load `Assets/Scenes/SampleScene`, and press Play.
 
