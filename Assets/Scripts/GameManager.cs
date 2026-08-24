@@ -4,8 +4,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public bool IsGameOver { get; private set; }
+    [SerializeField] private GameObject gameOverPanel;
 
+    public bool IsGameOver { get; private set; }
     public int Score { get; private set; }
 
     private void Awake()
@@ -19,14 +20,13 @@ public class GameManager : MonoBehaviour
 
         IsGameOver = true;
         Time.timeScale = 0f;
-        Debug.Log("Game Over!");
+        gameOverPanel.SetActive(true);
     }
 
     public void AddScore()
     {
         if (IsGameOver) return;
         Score++;
-        Debug.Log("Score: " + Score);
     }
 
     public void RestartGame()
