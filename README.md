@@ -1,6 +1,4 @@
-name: kobi Sima
-
-
+# Flappy Plane (Unity)
 
 A Flappy Bird–style arcade game built from scratch in Unity 6.3 with the 2D Built-In Render Pipeline.
 
